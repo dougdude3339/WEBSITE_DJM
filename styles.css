@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;1,200&display=swap');
+
+/* Then, use the font as needed */
+
+/* Set the default font to Courier New */
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 200;
+    font-style: italic;
+    background-color: #ffffff; /* Set background to white */
+    margin: 0;
+    padding: 20px; /* Add some padding around the content */
+}
+  
+  h1 {
+    font-size: 36px;
+    margin: 0; /* Remove margin */
+    background-color: black; /* Set background color to black */
+    color: orange; /* Set font color to orange */
+    display: inline-block; /* Change to inline-block for tight background */
+    padding: 5px 10px; /* Add padding (top-bottom and left-right) */
+  }
+  
+  ul {
+    list-style-type: disc; /* Bullets for the list */
+    padding-left: 40px; /* Increase padding for more indentation */
+    margin-top: 20px; /* Add margin above the list */
+  }
+  
+  ul li {
+    font-size: 25px;
+    margin-bottom: 10px; /* Space between list items */
+  }
+  
+  ul li::marker {
+    color: blue; /* Change this to your desired color */
+  }
+
+  /* Global link style */
+  a {
+    text-decoration: underline; /* Underline all links */
+    color: mediumblue; /* You can change the color if needed */
+  }
+  
+  a:hover {
+    color: #555; /* Optional: Slight color change on hover */
+  }
+
+  nav {
+    margin-top: 10px; /* Space between header and nav */
+  }
+  
+  nav a {
+    text-decoration: none; /* Remove underline */
+    color: blue; /* Change link color */
+    font-size: 25px; /* Link font size */
+  }
+  
+  nav a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  /* Paragraph styling */
+  p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 20px; /* Font size */
+    color: black; /* Text color */
+    line-height: 1.25; /* Line spacing for better readability */
+    margin-bottom: -10px; /* Space after each paragraph */
+}
+
+.highlight {
+    background-color: #FFC633; /* Highlight background in orange */
+    color: blue; /* Change text color to blue */
+    padding: 2px 4px; /* Optional: Add some padding for better visibility */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    font-weight: bold; /* Make the text bold */
+}
+
+.responsive-image {
+    width: 100%; /* Adjust to your desired width */
+    max-width: 800px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Adds space above the image */
+    margin-bottom: 20px; /* Adds space below the image */
+}
+
+.description {
+    color: blue; /* Change to your desired shade of blue */
+}
+
+
+
