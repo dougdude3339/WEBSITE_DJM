@@ -28,17 +28,23 @@
       document.addEventListener('DOMContentLoaded', function() {
         const gif = document.getElementById('myGif');
 
-        // Event listener for mouse move
+        // Event listener for mouse move (desktop)
         document.addEventListener('mousemove', (e) => {
-          // Calculate the movement effect based on mouse position
-          const xPos = e.clientX / window.innerWidth; // Horizontal ratio
-          const yPos = e.clientY / window.innerHeight; // Vertical ratio
+          const xPos = e.clientX / window.innerWidth;
+          const yPos = e.clientY / window.innerHeight;
 
-          // Apply a warping transformation (rotate, skew, scale)
-          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.2}, ${1 + yPos * 0.2})`;
-
-          // Apply filter effects (blur, brightness)
+          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 1}, ${1 + yPos * 0.2})`;
           gif.style.filter = `blur(${xPos * 5}px) brightness(${1 + yPos * 0.5})`;
+        });
+
+        // Event listener for touch move (mobile)
+        document.addEventListener('touchmove', (e) => {
+          const touch = e.touches[0]; // Get the first touch point
+          const xPos = touch.clientX / window.innerWidth;
+          const yPos = touch.clientY / window.innerHeight;
+
+          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.2}, ${1 + yPos * 0.2})`;
+          gif.style.filter = `blur(${xPos * 25}px) brightness(${1 + yPos * 0.5})`;
         });
       });
     </script>
@@ -54,6 +60,7 @@
         <li><a href="https://www.mixcloud.com/dougdude3339/">Mixcloud.com/dougdude3339</a></li>
       </ul>
     </section>
+    
     <section>
       <!-- Add id to reference the GIF -->
       <img id="myGif" src="images/LMSM_HOME_1.gif" alt="My GIF" width="400">
