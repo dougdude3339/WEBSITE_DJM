@@ -3,21 +3,45 @@
   <head>
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7XTFFVDB9K');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7XTFFVDB9K');
+    </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doug MacDowell</title>
     <link rel="stylesheet" href="styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
- 
+
+    <style>
+      /* Optional styling for smooth transitions */
+      img {
+        transition: transform 0.2s ease, filter 0.2s ease;
+      }
+    </style>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const gif = document.getElementById('myGif');
+
+        // Event listener for mouse move
+        document.addEventListener('mousemove', (e) => {
+          // Calculate the movement effect based on mouse position
+          const xPos = e.clientX / window.innerWidth; // Horizontal ratio
+          const yPos = e.clientY / window.innerHeight; // Vertical ratio
+
+          // Apply a warping transformation (rotate, skew, scale)
+          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.2}, ${1 + yPos * 0.2})`;
+
+          // Apply filter effects (blur, brightness)
+          gif.style.filter = `blur(${xPos * 5}px) brightness(${1 + yPos * 0.5})`;
+        });
+      });
+    </script>
   </head>
   <body>
     <h1>Doug MacDowell</h1>
@@ -30,5 +54,10 @@
         <li><a href="https://www.mixcloud.com/dougdude3339/">Mixcloud.com/dougdude3339</a></li>
       </ul>
     </section>
+    <section>
+      <!-- Add id to reference the GIF -->
+      <img id="myGif" src="images/LMSM_HOME_1.gif" alt="My GIF" width="400">
+    </section>
+
   </body>
 </html>
