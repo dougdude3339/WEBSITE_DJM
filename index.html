@@ -24,29 +24,38 @@
       }
     </style>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const gif = document.getElementById('myGif');
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const gif = document.getElementById('myGif');
 
-        // Event listener for mouse move (desktop)
-        document.addEventListener('mousemove', (e) => {
-          const xPos = e.clientX / window.innerWidth;
-          const yPos = e.clientY / window.innerHeight;
+    // Event listener for mouse move (desktop)
+    document.addEventListener('mousemove', (e) => {
+      const xPos = e.clientX / window.innerWidth;
+      const yPos = e.clientY / window.innerHeight;
 
-          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 1}, ${1 + yPos * 0.2})`;
-          gif.style.filter = `blur(${xPos * 5}px) brightness(${1 + yPos * 0.5})`;
-        });
+      gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 1}, ${1 + yPos * 0.2})`;
+      gif.style.filter = `blur(${xPos * 5}px) brightness(${1 + yPos * 0.5})`;
+    });
 
-        // Event listener for touch move (mobile)
-        document.addEventListener('touchmove', (e) => {
-          const touch = e.touches[0]; // Get the first touch point
-          const xPos = touch.clientX / window.innerWidth;
-          const yPos = touch.clientY / window.innerHeight;
+    // Event listener for touch move (mobile)
+    document.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0]; // Get the first touch point
+      const xPos = touch.clientX / window.innerWidth;
+      const yPos = touch.clientY / window.innerHeight;
 
-          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.2}, ${1 + yPos * 0.2})`;
-          gif.style.filter = `blur(${xPos * 25}px) brightness(${1 + yPos * 0.5})`;
-        });
-      });
+      gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.2}, ${1 + yPos * 0.2})`;
+      gif.style.filter = `blur(${xPos * 2}px) brightness(${1 + yPos * 0.5})`;
+    });
+
+    // Event listener for touch end (mobile)
+    document.addEventListener('touchend', () => {
+      // Reset the GIF's transform and filter when the touch ends
+      gif.style.transform = 'rotate(0deg) skew(0deg, 0deg) scale(1, 1)';
+      gif.style.filter = 'blur(0px) brightness(1)';
+    });
+  });
+</script>
+
     </script>
   </head>
   <body>
