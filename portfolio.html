@@ -1,21 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-7XTFFVDB9K');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7XTFFVDB9K');
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Link to your CSS file -->
+    <style>
+      /* General styling for the GIF on desktop */
+      #myGif {
+        position: fixed;
+        top: 0;
+        z-index: -11;
+        width: 100%;
+        height: auto;
+        opacity: 0.9;
+        pointer-events: none;
+      }
+
+      /* Styling for content elements to ensure they're on top */
+      nav, section {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* Media query for devices with max-width of 768px (e.g., tablets and mobile devices) */
+      @media (max-width: 768px) {
+        #myGif {
+          position: absolute;
+          top: 50px;
+          left: 0;
+          width: 100%;
+          height: 200px;
+          opacity: 0.6;
+          transform: none;
+          filter: none;
+          pointer-events: none;
+        }
+      }
+
+      /* Media query for devices with max-width of 480px (e.g., smaller mobile devices) */
+      @media (max-width: 768px) {
+        #myGif {
+          position: absolute;
+          top: 0px;
+          left: 0;
+          width: 100%;
+          height: auto;
+          opacity: 0.9;
+          transform: none;
+          filter: none;
+          pointer-events: none;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -24,8 +68,38 @@
 
     <nav>
       <a href="index.html">&larr; Home</a>
-      <!-- Link to Home page with left arrow -->
     </nav>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const gif = document.getElementById('myGif');
+    
+        // Event listener for mouse move (desktop)
+        document.addEventListener('mousemove', (e) => {
+          const xPos = e.clientX / window.innerWidth;
+          const yPos = e.clientY / window.innerHeight;
+    
+          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 1}, ${1 + yPos * 0.2})`;
+          gif.style.filter = `blur(${xPos * 5}px) brightness(${1 + yPos * 0.5})`;
+        });
+    
+        // Event listener for touch move (mobile)
+        document.addEventListener('touchmove', (e) => {
+          const touch = e.touches[0];
+          const xPos = touch.clientX / window.innerWidth;
+          const yPos = touch.clientY / window.innerHeight;
+    
+          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.2}, ${1 + yPos * 0.2})`;
+          gif.style.filter = `blur(${xPos * 2}px) brightness(${1 + yPos * 0.5})`;
+        });
+    
+        // Reset transform on touch end
+        document.addEventListener('touchend', () => {
+          gif.style.transform = 'rotate(0deg) skew(0deg, 0deg) scale(1, 1)';
+          gif.style.filter = 'blur(0px) brightness(1)';
+        });
+      });
+    </script>
 
     <section>
       <ul>
@@ -40,6 +114,11 @@
         <li><a href="LMCM.html">Lean Mean Computing Machine, 2023</a></li>
         <li><a href="LMCM_text.html">Lean Mean Computing Machine (TEXT), 2023</a></li>
       </ul>
+    </section>
+
+    <section>
+      <!-- GIF behind the text -->
+      <img id="myGif" src="images/LMSM_HOME_4.gif" alt="My GIF">
     </section>
   </body>
 </html>
