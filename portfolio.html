@@ -2,12 +2,17 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-7XTFFVDB9K');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-7XTFFVDB9K");
     </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -70,55 +75,36 @@
       <a href="index.html">&larr; Home</a>
     </nav>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const gif = document.getElementById('myGif');
-    
-        // Event listener for mouse move (desktop)
-        document.addEventListener('mousemove', (e) => {
-          const xPos = e.clientX / window.innerWidth;
-          const yPos = e.clientY / window.innerHeight;
-    
-          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 1}, ${1 + yPos * 0.2})`;
-          gif.style.filter = `blur(${xPos * 5}px) brightness(${1 + yPos * 0.5})`;
-        });
-    
-        // Event listener for touch move (mobile)
-        document.addEventListener('touchmove', (e) => {
-          const touch = e.touches[0];
-          const xPos = touch.clientX / window.innerWidth;
-          const yPos = touch.clientY / window.innerHeight;
-    
-          gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.2}, ${1 + yPos * 0.2})`;
-          gif.style.filter = `blur(${xPos * 2}px) brightness(${1 + yPos * 0.5})`;
-        });
-    
-        // Reset transform on touch end
-        document.addEventListener('touchend', () => {
-          gif.style.transform = 'rotate(0deg) skew(0deg, 0deg) scale(1, 1)';
-          gif.style.filter = 'blur(0px) brightness(1)';
-        });
-      });
-    </script>
-
     <section>
       <ul>
-        <li><a href="Percolating Human Computer Interaction, 2024.html">Percolating Human Computer Interaction, 2024</a></li>
-        <li><a href="Petite UTP Convertible Cables, 2024.html">4 1/4 in. Petite UTP Convertible Cables, 2024</a></li>
-        <li><a href="LMSM.html">Lean Mean Synthesis Machine, Colors, Blue GR10ABW-SM, 2023</a></li>
+        <li>
+          <a href="Percolating Human Computer Interaction, 2024.html"
+            >Percolating Human Computer Interaction, 2024</a
+          >
+        </li>
+        <li>
+          <a href="Petite UTP Convertible Cables, 2024.html"
+            >4 1/4 in. Petite UTP Convertible Cables, 2024</a
+          >
+        </li>
+        <li>
+          <a href="LMSM.html"
+            >Lean Mean Synthesis Machine, Colors, Blue GR10ABW-SM, 2023</a
+          >
+        </li>
         <li><a href="Good With Hands.html">Good With Hands, 2023</a></li>
-        <li><a href="GGR615-PC.html">Model No. GGR615-PC Owner's Manual, 2023</a></li>
+        <li>
+          <a href="GGR615-PC.html">Model No. GGR615-PC Owner's Manual, 2023</a>
+        </li>
         <li><a href="EZ KLEEN PC.html">EZ KLEEN PC, 2023</a></li>
         <li><a href="Soc-er-ball.html">Soc-er-ball, 2023</a></li>
         <li><a href="Lamb.html">The Lamb is, 2023</a></li>
         <li><a href="LMCM.html">Lean Mean Computing Machine, 2023</a></li>
-        <li><a href="LMCM_text.html">Lean Mean Computing Machine (TEXT), 2023</a></li>
+        <li>
+          <a href="LMCM_text.html">Lean Mean Computing Machine (TEXT), 2023</a>
+        </li>
       </ul>
     </section>
 
-    <section>
-      <!-- GIF behind the text -->
-      <img id="myGif" src="images/LMSM_HOME_4.gif" alt="My GIF">
-    </section>
   </body>
 </html>

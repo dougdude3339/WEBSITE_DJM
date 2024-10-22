@@ -1,50 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-      gtag("config", "G-7XTFFVDB9K");
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-7XTFFVDB9K');
     </script>
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doug MacDowell</title>
     <link rel="stylesheet" href="styles.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;1,200&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;1,200&display=swap" rel="stylesheet">
+
     <style>
       /* Optional styling for smooth transitions */
       img {
         transition: transform 0.2s ease, filter 0.2s ease;
       }
     </style>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() { const gif = document.getElementById('myGif'); const gifSrc = gif.src; // Save the original GIF source const staticImage = 'images/HOME_STILL_1.png'; // Path to a static image for the paused state let movementTimeout; function stopGif() { gif.src = staticImage; // Switch to static image } function resumeGif() { gif.src = gifSrc; // Switch back to the GIF } function handleInteraction() { clearTimeout(movementTimeout); // Clear the timeout if interaction continues stopGif(); // Pause the GIF movementTimeout = setTimeout(() => { resumeGif(); // Resume the GIF after 1 second of no movement }, 100); } // Event listener for mouse move (desktop) document.addEventListener('mousemove', (e) => { handleInteraction(); const xPos = e.clientX / window.innerWidth; const yPos = e.clientY / window.innerHeight; gif.style.transform = rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 1}, ${1 + yPos * 0.2}); gif.style.filter = blur(${xPos * 5}px) brightness(${1 + yPos * 0.5}); }); // Event listener for touch move (mobile) document.addEventListener('touchmove', (e) => { handleInteraction(); const touch = e.touches[0]; // Get the first touch point const xPos = touch.clientX / window.innerWidth; const yPos = touch.clientY / window.innerHeight; gif.style.transform = rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.2}, ${1 + yPos * 0.2}); gif.style.filter = blur(${xPos * 2}px) brightness(${1 + yPos * 0.5}); }); // Event listener for touch end (mobile) document.addEventListener('touchend', () => { resumeGif(); // Resume the GIF when touch ends gif.style.transform = 'rotate(0deg) skew(0deg, 0deg) scale(1, 1)'; gif.style.filter = 'blur(0px) brightness(1)'; }); });
-    </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const gif = document.getElementById('myGif');
+
+    // Event listener for mouse move (desktop)
+    document.addEventListener('mousemove', (e) => {
+      const xPos = e.clientX / window.innerWidth;
+      const yPos = e.clientY / window.innerHeight;
+
+      gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.3}, ${1 + yPos * 0.4})`;
+      gif.style.filter = `blur(${xPos * 20}px) brightness(${1 + yPos * 0.8})`;
+    });
+
+    // Event listener for touch move (mobile)
+    document.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0]; // Get the first touch point
+      const xPos = touch.clientX / window.innerWidth;
+      const yPos = touch.clientY / window.innerHeight;
+
+      gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.2}, ${1 + yPos * 0.4})`;
+      gif.style.filter = `blur(${xPos * 20}px) brightness(${1 + yPos * 0.8})`;
+    });
+
+    // Event listener for touch end (mobile)
+    document.addEventListener('touchend', () => {
+      // Reset the image's transform and filter when the touch ends
+      gif.style.transform = 'rotate(0deg) skew(0deg, 0deg) scale(1, 1)';
+      gif.style.filter = 'blur(0px) brightness(1)';
+    });
+  });
+</script>
+
   </head>
   <body>
     <h1>Doug MacDowell</h1>
+
     <section>
       <ul>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="About.html">About</a></li>
         <li><a href="CV.html">CV</a></li>
-        <li>
-          <a href="https://www.mixcloud.com/dougdude3339/"
-            >Mixcloud.com/dougdude3339</a
-          >
-        </li>
+        <li><a href="https://www.mixcloud.com/dougdude3339/">Mixcloud.com/dougdude3339</a></li>
       </ul>
+    </section>
+    <br />
+    <section>
+      <!-- Add id to reference the image -->
+      <img id="myGif" src="images/HOME_STILL_3.jpeg" alt="My Image" width="300">
     </section>
 
   </body>
