@@ -33,7 +33,7 @@
       const xPos = e.clientX / window.innerWidth;
       const yPos = e.clientY / window.innerHeight;
 
-      gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.3}, ${1 + yPos * 0.4})`;
+      gif.style.transform = `rotate(${xPos * 10 - 5}deg) skew(${xPos * 10 - 5}deg, ${yPos * 10 - 5}deg) scale(${1 + xPos * 0.8}, ${1 + yPos * 0.6})`;
       gif.style.filter = `blur(${xPos * 20}px) brightness(${1 + yPos * 0.8})`;
     });
 
