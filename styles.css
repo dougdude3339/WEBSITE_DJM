@@ -12,56 +12,56 @@ body {
     padding: 20px; /* Add some padding around the content */
 }
   
-  h1 {
+h1 {
     font-size: 36px;
     margin: 0; /* Remove margin */
     background-color: black; /* Set background color to black */
     color: orange; /* Set font color to orange */
     display: inline-block; /* Change to inline-block for tight background */
     padding: 5px 10px; /* Add padding (top-bottom and left-right) */
-  }
+}
   
-  ul {
+ul {
     list-style-type: disc; /* Bullets for the list */
     padding-left: 40px; /* Increase padding for more indentation */
     margin-top: 20px; /* Add margin above the list */
-  }
+}
   
-  ul li {
+ul li {
     font-size: 20px;
     margin-bottom: 10px; /* Space between list items */
-  }
+}
   
-  ul li::marker {
+ul li::marker {
     color: blue; /* Change this to your desired color */
-  }
+}
 
-  /* Global link style */
-  a {
+/* Global link style */
+a {
     text-decoration: underline; /* Underline all links */
     color: mediumblue; /* You can change the color if needed */
-  }
+}
   
-  a:hover {
+a:hover {
     color: #555; /* Optional: Slight color change on hover */
-  }
+}
 
-  nav {
+nav {
     margin-top: 10px; /* Space between header and nav */
-  }
+}
   
-  nav a {
+nav a {
     text-decoration: none; /* Remove underline */
     color: blue; /* Change link color */
     font-size: 25px; /* Link font size */
-  }
+}
   
-  nav a:hover {
+nav a:hover {
     text-decoration: underline; /* Underline on hover */
-  }
+}
   
-  /* Paragraph styling */
-  p {
+/* Paragraph styling */
+p {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 200;
     font-style: italic;
@@ -91,5 +91,31 @@ body {
     color: blue; /* Change to your desired shade of blue */
 }
 
+/* Image container for left-aligned images */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align images to the left */
+    padding-left: 0;
+}
 
+.image-container img {
+    width: 100%; /* Ensures images are responsive */
+    max-width: 600px; /* Set a max width to control image size */
+    margin-bottom: 10px; /* Optional: add space between images */
+}
 
+section img {
+  display: block;
+  margin-left: 0; /* Ensure alignment to the left */
+  margin-bottom: 20px; /* Add some space between the images */
+  max-width: 100%; /* Make images responsive */
+  width: 300px; /* Set a default width for the images */
+}
+
+/* For larger screens */
+@media only screen and (min-width: 768px) {
+  section img {
+    width: 300px; /* You can adjust the size based on preference */
+  }
+}
