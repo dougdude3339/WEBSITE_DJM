@@ -20,7 +20,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
-    <!-- Link to your CSS file -->
   </head>
   <body>
     <header>
@@ -29,11 +28,9 @@
 
     <nav>
       <a href="portfolio.html">&larr; Portfolio</a>
-      <!-- Link to Home page with left arrow -->
     </nav>
 
     <section>
-      <!-- First artwork/project -->
       <article>
         <p>
           <strong>Title:</strong>
@@ -47,69 +44,100 @@
         </p>
         <p><strong>Dimension:</strong> 2 x 1.5 x 1.5 feet</p>
         <p class="description">
-          <br />Percolating HCI is an ongoing project featuring a coffee gadget
+          Percolating HCI is an ongoing project featuring a coffee gadget
           interfaced with DDR3 unbuffered DIMMS.<br />
-          <br />
-          Coffeematic PC examines flows from perspectives of
-          percolation and design - extending headroom within the operating environment, while percolating
-          the melodies encountered through its configuration.
-          <br /> <br />
-          You can read more about how Coffeematic PC works below.
-          <br />
+          Coffeematic PC examines flows from perspectives of percolation and
+          design - extending headroom within the operating environment while
+          percolating the melodies encountered through its configuration.
         </p>
+
+      </p>
         <img
           src="images/COFFEE_1.jpeg"
           alt="Percolating Human Computer Interaction"
           class="responsive-image"
         />
-        <div
-          class="tableauPlaceholder"
-          id="viz1729882775587"
-          style="position: relative"
-        >
-          <noscript
-            ><a href="#"
-              ><img
-                alt="Sheet 1 "
-                src="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CoffeematicPCDataVisualization-DJM1&#47;Sheet1&#47;1_rss.png"
-                style="border: none" /></a></noscript
-          ><object class="tableauViz" style="display: none">
-            <param
-              name="host_url"
-              value="https%3A%2F%2Fpublic.tableau.com%2F"
-            />
-            <param name="embed_code_version" value="3" />
-            <param name="site_root" value="" />
-            <param
-              name="name"
-              value="CoffeematicPCDataVisualization-DJM1&#47;Sheet1"
-            />
-            <param name="tabs" value="no" />
-            <param name="toolbar" value="yes" />
-            <param
-              name="static_image"
-              value="https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CoffeematicPCDataVisualization-DJM1&#47;Sheet1&#47;1.png"
-            />
-            <param name="animate_transition" value="yes" />
-            <param name="display_static_image" value="yes" />
-            <param name="display_spinner" value="yes" />
-            <param name="display_overlay" value="yes" />
-            <param name="display_count" value="yes" />
-            <param name="language" value="en-US" />
-            <param name="filter" value="publish=yes" />
-          </object>
+
+        <p class="description">
+          Coffeematic PC percolates Java like a regular coffee maker. Very hot Java. 
+          <br /><br />
+          A pump takes the caffenated slurry (~90C/194F) 
+          and circulates it thru two radiators sitting atop Coffeematic PC's crown -> 
+          down to a CPU tucked within an ASUS M2NPV-VM motherboard snugly strapped to 
+          Coffeematic PC's athletic back. 
+          <br /><br />
+          The Java continues through a tube returning to Coffeematic PC's reproduced caraffe.
+          <br /><br />
+          The process repeats until the coffee is consumed by the user or the machine is powered off.
+        </p>
+        <br />
+
+      </p>
+      <img
+        src="images/COFFEE_2.jpeg"
+        alt="Percolating Human Computer Interaction"
+        class="responsive-image"
+      />
+      <p class="description">
+        ↑ Coffeematic PC has a dedicated pump to aggressively dispense Java into user.
+      </p>
+      <br />
+      <p class="description">
+        PCs are meant to be cool and Java hot. The graph below monitors Coffeematic PC for 75 minutes. 
+        <br />
+        Coffeematic PC is just barely non-destructive. <span class="highlight">CPU and Java eventually find an equalibrium. A warm 33C/91F - 
+        shockingly close to the temperature of the slurry that flows through you and me.</span>
+      </p>
+
+      <br />
+      <br />
+        <!-- Tableau Graph Container with Interactive Effect -->
+        <div class="tableau-container" id="tableau-container">
+          <div class="tableauPlaceholder" id="viz1730176959259">
+            <noscript
+              ><a href="#"
+                ><img
+                  alt="Dashboard 1"
+                  src="https://public.tableau.com/static/images/Co/CoffeematicPCDataVisualization-DJM3/Dashboard1/1_rss.png"
+                  style="border: none"
+              /></a></noscript
+            ><object class="tableauViz" style="display:none;">
+              <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F" />
+              <param name="embed_code_version" value="3" />
+              <param name="site_root" value="" />
+              <param name="name" value="CoffeematicPCDataVisualization-DJM3/Dashboard1" />
+              <param name="tabs" value="no" />
+              <param name="toolbar" value="yes" />
+              <param name="static_image" value="https://public.tableau.com/static/images/Co/CoffeematicPCDataVisualization-DJM3/Dashboard1/1.png" />
+              <param name="animate_transition" value="yes" />
+              <param name="display_static_image" value="yes" />
+              <param name="display_spinner" value="yes" />
+              <param name="display_overlay" value="yes" />
+              <param name="display_count" value="yes" />
+              <param name="language" value="en-US" />
+              <param name="filter" value="publish=yes" />
+            </object>
+          </div>
+          <script type="text/javascript">
+            var divElement = document.getElementById("viz1730176959259");
+            var vizElement = divElement.getElementsByTagName("object")[0];
+            if (divElement.offsetWidth > 800) {
+              vizElement.style.width = "1000px";
+              vizElement.style.height = "827px";
+            } else if (divElement.offsetWidth > 500) {
+              vizElement.style.width = "1000px";
+              vizElement.style.height = "827px";
+            } else {
+              vizElement.style.width = "1000px";
+              vizElement.style.height = "827px";
+            }
+            var scriptElement = document.createElement("script");
+            scriptElement.src = "https://public.tableau.com/javascripts/api/viz_v1.js";
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+          </script>
         </div>
-        <script type="text/javascript">
-          var divElement = document.getElementById("viz1729882775587");
-          var vizElement = divElement.getElementsByTagName("object")[0];
-          vizElement.style.width = "100%";
-          vizElement.style.height = divElement.offsetWidth * 0.75 + "px";
-          var scriptElement = document.createElement("script");
-          scriptElement.src =
-            "https://public.tableau.com/javascripts/api/viz_v1.js";
-          vizElement.parentNode.insertBefore(scriptElement, vizElement);
-        </script>
       </article>
     </section>
+    </script>
   </body>
 </html>
