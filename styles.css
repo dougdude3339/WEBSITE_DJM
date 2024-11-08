@@ -79,6 +79,15 @@ p {
     font-weight: bold; /* Make the text bold */
 }
 
+.large-highlight {
+    background-color: #FFC633; /* Highlight background in orange */
+    color: blue; /* Change text color to blue */
+    padding: 2px 4px; /* Optional: Add some padding for better visibility */
+    border-radius: 4px; /* Optional: Add rounded corners */
+    font-weight: bold; /* Make the text bold */
+    font-size: 50px; /* Font size */
+}
+
 .responsive-image {
     width: 100%; /* Adjust to your desired width */
     max-width: 800px; /* Set a maximum width */
