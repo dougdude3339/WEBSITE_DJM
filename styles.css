@@ -6,7 +6,6 @@
 body {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 200;
-    font-style: italic;
     background-color: #ffffff; /* Set background to white */
     margin: 0;
     padding: 20px; /* Add some padding around the content */
@@ -14,6 +13,7 @@ body {
   
 h1 {
     font-size: 36px;
+    font-style: italic;
     margin: 0; /* Remove margin */
     background-color: black; /* Set background color to black */
     color: orange; /* Set font color to orange */
@@ -23,6 +23,7 @@ h1 {
   
 ul {
     list-style-type: disc; /* Bullets for the list */
+    font-style: italic;
     padding-left: 40px; /* Increase padding for more indentation */
     margin-top: 20px; /* Add margin above the list */
 }
@@ -52,6 +53,7 @@ nav {
   
 nav a {
     text-decoration: none; /* Remove underline */
+    font-style: italic;
     color: blue; /* Change link color */
     font-size: 25px; /* Link font size */
 }
@@ -64,15 +66,15 @@ nav a:hover {
 p {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 200;
-    font-style: italic;
-    font-size: 20px; /* Font size */
+    font-size: 18px; /* Font size */
     color: black; /* Text color */
-    line-height: 1.25; /* Line spacing for better readability */
+    line-height: 1.5; /* Line spacing for better readability */
     margin-bottom: -10px; /* Space after each paragraph */
 }
 
 .highlight {
     background-color: #FFC633; /* Highlight background in orange */
+    font-style: italic;
     color: blue; /* Change text color to blue */
     padding: 2px 4px; /* Optional: Add some padding for better visibility */
     border-radius: 4px; /* Optional: Add rounded corners */
@@ -81,11 +83,12 @@ p {
 
 .large-highlight {
     background-color: #FFC633; /* Highlight background in orange */
+    font-style: italic;
     color: blue; /* Change text color to blue */
     padding: 2px 4px; /* Optional: Add some padding for better visibility */
     border-radius: 4px; /* Optional: Add rounded corners */
     font-weight: bold; /* Make the text bold */
-    font-size: 50px; /* Font size */
+    font-size: 35px; /* Font size */
 }
 
 .responsive-image {
@@ -97,7 +100,7 @@ p {
 }
 
 .description {
-    color: blue; /* Change to your desired shade of blue */
+    color: rgb(31, 31, 36); /* Change to your desired shade of blue */
 }
 
 /* Image container for left-aligned images */
