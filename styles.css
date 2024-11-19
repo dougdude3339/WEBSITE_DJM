@@ -29,7 +29,7 @@ ul {
 }
   
 ul li {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px; /* Space between list items */
 }
   
@@ -131,3 +131,22 @@ section img {
     width: 300px; /* You can adjust the size based on preference */
   }
 }
+
+.responsive-video {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Set your desired maximum width */
+    padding-top: 56.25%; /* Aspect ratio: 16:9 */
+    margin-top: 20px; /* Optional spacing */
+    margin-bottom: 20px; /* Optional spacing */
+}
+
+.responsive-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
