@@ -99,6 +99,14 @@ p {
     margin-bottom: 20px; /* Adds space below the image */
 }
 
+.responsive-image-2 {
+    width: 100%; /* Adjust to your desired width */
+    max-width: 1000px; /* Set a maximum width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Adds space above the image */
+    margin-bottom: 20px; /* Adds space below the image */
+}
+
 .description {
     color: rgb(31, 31, 36); /* Change to your desired shade of blue */
 }
