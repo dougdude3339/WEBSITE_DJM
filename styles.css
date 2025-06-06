@@ -158,3 +158,66 @@ section img {
     border: none;
 }
 
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: visible;
+  font-weight: bold;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel img.fade-out {
+  opacity: 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* Push arrows outside the image */
+.left {
+  left: -30px; /* Move to the left of the image */
+}
+
+.right {
+  right: -30px; /* Move to the right of the image */
+}
+
+
+.counter {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 10px;
+  color: #444;
+}
+
+body, html {
+  margin: 1;
+  padding: 1;
+  width: 100%;
+}
+
+main, .container {
+  width: 100%;
+}
+
+
