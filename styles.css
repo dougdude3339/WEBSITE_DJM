@@ -158,11 +158,12 @@ section img {
     border: none;
 }
 
+/* Image Carousel */
 .carousel {
   position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 1000px;
+  margin-left: 0;
+  margin-right: auto;
   text-align: center;
   overflow: visible;
   font-weight: bold;
