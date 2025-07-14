@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7XTFFVDB9K');
+</script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your CSS file -->
+  </head>
+  <body>
+    <header>
+      <h1>Doug MacDowell</h1>
+    </header>
+
+    <nav>
+      <a href="portfolio.html">&larr; Projects</a>
+      <!-- Link to Home page with left arrow -->
+    </nav>
+
+    <section>
+      <!-- First artwork/project -->
+      <article>
+
+        <p>
+        <span class="large-highlight">DATA PORTRAITS (SPARKLINES)</span> 
+        <br />
+
+        </p>
+        <p><strong>Year:</strong> 2025</p>
+
+        <p>
+          <strong>Made with:</strong> Graphite, archival quality inks, and paper.
+        </p>
+
+        <p>
+        <strong>Featured in:</strong> <a href="Sparklines.html">Sparklines</a> 
+        </p>
+
+
+
+        <p>
+          <strong>Description:</strong> In the late 1800's, sociologist W.E.B. Dubois and a team at Harvard University 
+          created a portfolio of 
+          <a href="https://www.loc.gov/pictures/item/2005679642/" target="_blank">60 hand drafted data visualizations</a>. 
+          or, data portraits, to express African American life 
+          in America to an international audience at the 1900 Paris World Fair. The team's approach to the data visualizations 
+          focused on clarity of the data, but also experimental and artistic visual techniques to capture 
+          attention and elevate clear data to something that was also abstract and expressive.
+          
+          <br/><br/>I created the data portraits you see here for an exhibition called 
+          <a href="Sparklines.html"target="_blank">Sparklines</a> where hand-drafted data visualizations 
+          accompany a <a href="Coffeematic PC.html"target="_blank">coffee maker computer</a>.
+          I was inspired by W.E.B. Dubois' data portraits but mine focus on a different population that I call Artist/Hackers -  
+          a subversive group with the power to make significant changes to systems depending on their own morality. 
+          Artist/hackers are often anonymous. 
+          Data portraits create a portrait to understand something 
+          about the character, motivations, and even taste of artist/hackers.
+          <br/><br/>
+        </p>
+
+<div class="carousel">
+  <div id="image-counter" class="counter">1/5</div>
+
+  <button class="arrow left" onclick="prevImage()">&#10094;</button>
+
+  <a id="image-link" href="images/PORTRAIT_1.png" target="_blank">
+    <img id="carousel-image" src="images/PORTRAIT_1.png" alt="Artwork" />
+  </a>
+
+  <button class="arrow right" onclick="nextImage()">&#10095;</button>
+</div>
+
+
+<script>
+  const images = [
+    "images/PORTRAIT_1.png",
+    "images/PORTRAIT_3.png",
+        "images/PORTRAIT_2.png",
+            "images/PORTRAIT_5.png",
+                "images/PORTRAIT_4.png",
+  ];
+
+  let currentIndex = 0;
+  const imgElement = document.getElementById("carousel-image");
+  const linkElement = document.getElementById("image-link"); // 👈 ADD THIS LINE
+  const counterElement = document.getElementById("image-counter");
+
+  function showImage(index) {
+    imgElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      imgElement.src = images[index];
+      linkElement.href = images[index]; // 👈 ADD THIS LINE
+
+      counterElement.textContent = `${index + 1}/${images.length}`;
+
+      requestAnimationFrame(() => {
+        imgElement.classList.remove("fade-out");
+      });
+    }, 300);
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  // Initialize on page load
+  showImage(currentIndex);
+</script>
+</body>
+
+
+
+  </body>
+</html>
