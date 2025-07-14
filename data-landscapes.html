@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-7XTFFVDB9K');
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Explore Doug MacDowell's hand-drawn data visualizations, 'Data Landscapes'. Part of the Sparklines exhibition, these graphite and ink charts represent subversive technology history from 2000 to 2024." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://dougmacdowell.com/data-landscapes.html" />
+    <meta property="og:title" content="Data Landscapes - Hand Drawn Data Visualization by Doug MacDowell" />
+    <meta property="og:description" content="Seven detailed, hand-rendered charts explore data from 2000-2024 using archival materials and analog tools. Featured in the Sparklines show." />
+    <meta property="og:image" content="https://dougmacdowell.com/images/data-landscape-1.png" />
+    <meta property="og:url" content="https://dougmacdowell.com/data-landscapes.html" />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>Data Landscapes - Hand Drawn Data Visualization by Doug MacDowell</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Doug MacDowell</h1>
+    </header>
+
+    <nav>
+      <a href="portfolio.html">&larr; Projects</a>
+      <!-- Link to Home page with left arrow -->
+    </nav>
+
+    <section>
+      <!-- First artwork/project -->
+      <article>
+
+        <p>
+        <span class="large-highlight">DATA LANDSCAPES (SPARKLINES)</span> 
+        <br />
+
+        </p>
+        <p><strong>Year:</strong> 2025</p>
+
+        <p>
+          <strong>Made with:</strong> Graphite, archival quality inks, and paper.
+        </p>
+
+        <p>
+        <strong>Featured in:</strong> <a href="sparklines.html">Sparklines</a> 
+        </p>
+
+        <p>
+          <strong>Description:</strong> Data Landscapes are a series of seven, hand drafted data visualizations, 
+          each containing six lines of data 
+          between the years 2000 and 2024 (a period of caffeinated technological growth). With each line, you'll see that 
+          the years 2002, 2018, 2019, and 2024 are labeled. These are years when a group I call Artist/Hackers built 
+          coffee maker gaming computers. These Artist/Hackers span the years 2002 to 2024, with a curious 15-year gap in their 
+          creation. Data landscapes investigate this gap, using publically available social data to understand something about a 
+          private and subversive group. <br/><br/>
+
+          Data Landscapes are drawn by hand using techniques that existed before computing tools were available like the t-square, 
+          square, rulers, a lettering kit, and shape templates. With a computer, each of these pieces may take 
+          20 minutes to create, but here they take between 20 - 30 hours. This is part of an 
+          art exhibition called <a href="sparklines.html"target="_blank">Sparklines</a> where hand-drafted data visualizations 
+          accompany a <a href="coffeematic-pc.html"target="_blank">coffee maker computer</a>. <br/><br/>
+        </p>
+
+<div class="carousel">
+  <div id="image-counter" class="counter">1/7</div>
+
+  
+
+  <button class="arrow left" onclick="prevImage()">&#10094;</button>
+
+  <a id="image-link" href="images/data-landscape-1.png" target="_blank">
+    <img id="carousel-image" src="images/data-landscape-1.png" alt="Artwork" />
+  </a>
+
+  <button class="arrow right" onclick="nextImage()">&#10095;</button>
+</div>
+
+
+<script>
+  const images = [
+    "images/data-landscape-2.png",
+    "images/data-landscape-1.png",
+    "images/data-landscape-3.png",
+    "images/data-landscape-4.png",
+    "images/data-landscape-5.png",
+    "images/data-landscape-6.png",
+    "images/data-landscape-7.png",
+  ];
+
+  let currentIndex = 0;
+  const imgElement = document.getElementById("carousel-image");
+  const linkElement = document.getElementById("image-link"); // 👈 ADD THIS LINE
+  const counterElement = document.getElementById("image-counter");
+
+  function showImage(index) {
+    imgElement.classList.add("fade-out");
+
+    setTimeout(() => {
+      imgElement.src = images[index];
+      linkElement.href = images[index]; // 👈 ADD THIS LINE
+
+      counterElement.textContent = `${index + 1}/${images.length}`;
+
+      requestAnimationFrame(() => {
+        imgElement.classList.remove("fade-out");
+      });
+    }, 300);
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+
+  // Initialize on page load
+  showImage(currentIndex);
+</script>
+          
+</body>
+
+
+</html>
