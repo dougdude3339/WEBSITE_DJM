@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;1,200&display=swap');
 
 /* Then, use the font as needed */
+.meta-label {
+  font-weight: bold;
+  font-style: italic;
+  display: inline-block;
+  margin-right: 5px;
+}
 
 /* Set the default font to Courier New */
 body {
@@ -12,7 +18,38 @@ body {
 }
   
 h1 {
+  font-size: 35px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 1em; /* optional for spacing */
+}
+/* Hides h2 */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.label-tag {
+  background-color: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #444;
+}
+
+
+
+.site-title {
     font-size: 36px;
+    font-weight: bold;  
     font-style: italic;
     margin: 0; /* Remove margin */
     background-color: black; /* Set background color to black */
@@ -209,8 +246,3 @@ section img {
   padding-left: 10px;
   color: #444;
 }
-
-
-
-
-
