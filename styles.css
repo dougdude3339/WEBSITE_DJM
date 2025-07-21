@@ -16,9 +16,21 @@ body {
     margin: 0;
     padding: 20px; /* Add some padding around the content */
 }
+
+/* Paragraph styling */
+p {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 200;
+    font-size: 18px; /* Font size */
+    color: black; /* Text color */
+    line-height: 1.5; /* Line spacing for better readability */
+    margin-bottom: -10px; /* Space after each paragraph */
+}
   
 h1 {
-  font-size: 35px;
+  font-size: 18px;
+      font-style: italic;
+          color: gray; /* Set font color to orange */
 }
 
 h2 {
@@ -99,15 +111,7 @@ nav a:hover {
     text-decoration: underline; /* Underline on hover */
 }
   
-/* Paragraph styling */
-p {
-    font-family: 'IBM Plex Mono', monospace;
-    font-weight: 200;
-    font-size: 18px; /* Font size */
-    color: black; /* Text color */
-    line-height: 1.5; /* Line spacing for better readability */
-    margin-bottom: -10px; /* Space after each paragraph */
-}
+
 
 .highlight {
     background-color: #FFC633; /* Highlight background in orange */
@@ -245,4 +249,14 @@ section img {
   text-align: left;
   padding-left: 10px;
   color: #444;
+}
+
+.footer {
+  font-size: 1.1rem;
+  margin-top: 4rem;
+  padding-top: 1rem;
+}
+
+.footer-text {
+  color: #777;
 }
