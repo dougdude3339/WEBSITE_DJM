@@ -21,20 +21,20 @@ body {
 p {
     font-family: 'IBM Plex Mono', monospace;
     font-weight: 200;
-    font-size: 18px; /* Font size */
+    font-size: 16px; /* Font size */
     color: black; /* Text color */
     line-height: 1.5; /* Line spacing for better readability */
     margin-bottom: -10px; /* Space after each paragraph */
 }
   
 h1 {
-  font-size: 18px;
+  font-size: 20px;
       font-style: italic;
           color: gray; /* Set font color to orange */
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 1em; /* optional for spacing */
 }
 /* Hides h2 */
@@ -60,7 +60,7 @@ h2 {
 
 
 .site-title {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;  
     font-style: italic;
     margin: 0; /* Remove margin */
@@ -78,7 +78,7 @@ ul {
 }
   
 ul li {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px; /* Space between list items */
 }
   
@@ -104,7 +104,7 @@ nav a {
     text-decoration: none; /* Remove underline */
     font-style: italic;
     color: blue; /* Change link color */
-    font-size: 25px; /* Link font size */
+    font-size: 20px; /* Link font size */
 }
   
 nav a:hover {
