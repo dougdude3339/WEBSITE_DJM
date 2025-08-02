@@ -69,6 +69,19 @@ h2 {
     display: inline-block; /* Change to inline-block for tight background */
     padding: 5px 10px; /* Add padding (top-bottom and left-right) */
 }
+
+.site-title a {
+  text-decoration: none; /* removes underline */
+  color: inherit;        /* keeps the text color same as the parent */
+}
+
+.site-title a:hover {
+  color: inherit;        /* keep the same color on hover */
+  text-decoration: none; /* no underline on hover */
+}
+
+
+
   
 ul {
     list-style-type: disc; /* Bullets for the list */
@@ -260,3 +273,5 @@ section img {
 .footer-text {
   color: #777;
 }
+
+
