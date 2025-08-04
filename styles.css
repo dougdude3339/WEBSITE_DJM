@@ -266,12 +266,13 @@ section img {
 
 .footer {
   font-size: 1.1rem;
-  margin-top: 4rem;
-  padding-top: 1rem;
+  padding-top: .6rem;
 }
 
 .footer-text {
   color: #777;
 }
+
+
 
 
