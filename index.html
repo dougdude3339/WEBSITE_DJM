@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -15,14 +18,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <meta name="description" content="Doug MacDowell is a visual artist working with computers, absurdity, and hand-drawn data. Explore experimental projects, shows, lists, and more." />
+    <meta
+      name="description"
+      content="Doug MacDowell is a visual artist working with computers, absurdity, and hand-drawn data. Explore experimental projects, shows, lists, and more."
+    />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://dougmacdowell.com/" />
 
     <!-- Open Graph & Twitter -->
     <meta property="og:title" content="Doug MacDowell - Visual Artist" />
-    <meta property="og:description" content="Explore the projects, exhibitions, and research of Doug MacDowell." />
-    <meta property="og:image" content="https://dougmacdowell.com/images/HOME_STILL_3.jpeg" />
+    <meta
+      property="og:description"
+      content="Explore the projects, exhibitions, and research of Doug MacDowell."
+    />
+    <meta
+      property="og:image"
+      content="https://dougmacdowell.com/images/HOME_STILL_3.jpeg"
+    />
     <meta property="og:url" content="https://dougmacdowell.com/" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -84,42 +96,80 @@
         });
       });
     </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;1,200&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-      <main>
+    <main>
+      <header
+        style="
+          margin-bottom: 10px;
+          display: flex;
+          align-items: flex-end;
+          gap: 12px; /* optional space between title and button */
+        "
+      >
+        <div class="site-title">
+          <a href="index.html">Doug MacDowell</a>
+        </div>
 
-<header>
-  <div class="site-title">
-    <a href="index.html">Doug MacDowell</a>
-  </div>
-</header>
+        <a href="http://eepurl.com/ji5LRA" target="_blank">
+          <button
+            style="
+              background-color: black;
+              color: orange;
+              padding: 4px 4px;
+              border: none;
+              border-radius: 0px;
+              font-size: 14px;
+              font-style: italic;
+              font-weight: bold;
+              cursor: pointer;
+              transition: background-color 0.3s ease;
+              font-family: 'IBM Plex Mono', monospace;
+            "
+          >
+            Subscribe
+          </button>
+        </a>
+      </header>
 
+      <h1 class="visually-hidden">
+        Doug MacDowell Artist and Technologist Website Home Page
+      </h1>
+      <h2 class="visually-hidden">
+        Doug MacDowell is an artist in central Ohio, he builds absurd custom
+        computers like a george foreman computer along with other absurd
+        artwork.
+      </h2>
 
-<h1 class="visually-hidden">Doug MacDowell Artist and Technologist Website Home Page </h1>
-      <h2 class="visually-hidden">Doug MacDowell is an artist in central Ohio, he builds absurd custom computers 
-        like a george foreman computer along with other absurd artwork.</h2>
+      <section>
+        <ul>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="shows.html">Shows</a></li>
+          <li><a href="lists.html">Lists</a></li>
+          <li><a href="about.html">About</a></li>
 
+          <li>
+            <a href="https://www.mixcloud.com/dougdude3339/"
+              >Mixcloud.com/dougdude3339</a
+            >
+          </li>
+        </ul>
+      </section>
 
-    <section>
-      <ul>
-        <li><a href="portfolio.html">Projects</a></li>
-        <li><a href="shows.html">Shows</a></li>
-        <li><a href="lists.html">Lists</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="subscribe.html">Subscribe</a></li>
-        <li><a href="https://www.mixcloud.com/dougdude3339/">Mixcloud.com/dougdude3339</a></li>
-      </ul>
-    </section>
-    <br />
-    <section>
-      <!-- Add id to reference the image -->
-      <img
-        id="myGif"
-        src="images/HOME_STILL_3.jpeg"
-        alt="My Image"
-        width="300"
-      />
-    </section>
+      <br />
+      <section>
+        <!-- Add id to reference the image -->
+        <img
+          id="myGif"
+          src="images/HOME_STILL_3.jpeg"
+          alt="My Image"
+          width="300"
+        />
+      </section>
     </main>
   </body>
 </html>
