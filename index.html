@@ -115,25 +115,57 @@
           <a href="index.html">Doug MacDowell</a>
         </div>
 
-        <a href="http://eepurl.com/ji5LRA" target="_blank">
-          <button
-            style="
-              background-color: black;
-              color: orange;
-              padding: 4px 4px;
-              border: none;
-              border-radius: 0px;
-              font-size: 14px;
-              font-style: italic;
-              font-weight: bold;
-              cursor: pointer;
-              transition: background-color 0.3s ease;
-              font-family: 'IBM Plex Mono', monospace;
-            "
-          >
-            Subscribe
-          </button>
-        </a>
+ <a href="http://eepurl.com/ji5LRA" target="_blank">
+  <button
+    id="weirdButton"
+    style="
+      background-color: black;
+      color: orange;
+      padding: 4px 4px;
+      border: none;
+      border-radius: 0px;
+      font-size: 14px;
+      font-style: italic;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: 'IBM Plex Mono', monospace;
+      display: inline-flex;
+      gap: 2px;
+    "
+  >
+  </button>
+</a>
+
+<script>
+  const button = document.getElementById("weirdButton");
+  const text = "Subscribe";
+
+  // Create a span for each letter
+  text.split("").forEach((char, i) => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    span.style.display = "inline-block";
+    span.style.transition = "transform 0.2s ease";
+    button.appendChild(span);
+  });
+
+  // Glitch effect on hover
+  button.addEventListener("mouseover", () => {
+    [...button.children].forEach((span) => {
+      const x = (Math.random() - 0.5) * 6; // -3 to 3px
+      const y = (Math.random() - 0.5) * 6;
+      const r = (Math.random() - 0.5) * 20; // rotation
+      span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+    });
+  });
+
+  // Reset when mouse leaves
+  button.addEventListener("mouseout", () => {
+    [...button.children].forEach((span) => {
+      span.style.transform = "none";
+    });
+  });
+</script>
       </header>
 
       <h1 class="visually-hidden">
