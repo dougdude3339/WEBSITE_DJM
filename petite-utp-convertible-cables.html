@@ -35,69 +35,9 @@
 
   <body>
  <header
-  style="
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column; /* stack title and button vertically */
-    align-items: flex-start; /* align left */
-    gap: 8px; /* space between title and button */
-  "
->
-  <div class="site-title">
+class="site-title">
     <a href="index.html">Doug MacDowell</a>
-  </div>
-
-  <a href="http://eepurl.com/ji5LRA" target="_blank">
-    <button
-      id="weirdButton"
-      style="
-        background-color: black;
-        color: orange;
-        padding: 4px 9px;
-        border: none;
-        border-radius: 0px;
-        font-size: 14px;
-        font-style: italic;
-        font-weight: bold;
-        cursor: pointer;
-        font-family: 'IBM Plex Mono', monospace;
-        display: inline-flex;
-        gap: 2px;
-      "
-    ></button>
-  </a>
 </header>
-
-<script>
-  const button = document.getElementById("weirdButton");
-  const text = "Subscribe";
-
-  // Create a span for each letter
-  text.split("").forEach((char) => {
-    const span = document.createElement("span");
-    span.textContent = char;
-    span.style.display = "inline-block";
-    span.style.transition = "transform 0.2s ease";
-    button.appendChild(span);
-  });
-
-  // Glitch effect on hover
-  button.addEventListener("mouseover", () => {
-    [...button.children].forEach((span) => {
-      const x = (Math.random() - 0.5) * 6;
-      const y = (Math.random() - 0.5) * 6;
-      const r = (Math.random() - 0.5) * 20;
-      span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
-    });
-  });
-
-  // Reset when mouse leaves
-  button.addEventListener("mouseout", () => {
-    [...button.children].forEach((span) => {
-      span.style.transform = "none";
-    });
-  });
-</script>
 
     <nav>
       <a href="portfolio.html">&larr; Projects</a>
@@ -176,7 +116,67 @@
       </article>
     </section>
 
-<br /><br />
+<br />
+
+<p class="description">
+  No spam. Just art and ideas 👽
+</p>
+<br />
+
+<button
+  id="weirdButton"
+  onclick="window.open('http://eepurl.com/ji5LRA', '_blank')"
+  style="
+    background-color: black;
+    color: orange;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+    display: inline-flex;
+    gap: 2px;
+  "
+>
+  Subscribe
+</button>
+
+<script>
+  const button = document.getElementById("weirdButton");
+  const text = "Subscribe";
+
+  // Clear existing content (optional)
+  button.textContent = "";
+
+  // Create a span for each letter
+  text.split("").forEach((char) => {
+    const span = document.createElement("span");
+    span.textContent = char;
+    span.style.display = "inline-block";
+    span.style.transition = "transform 0.2s ease";
+    button.appendChild(span);
+  });
+
+  // Glitch effect on hover
+  button.addEventListener("mouseover", () => {
+    [...button.children].forEach((span) => {
+      const x = (Math.random() - 0.5) * 6;
+      const y = (Math.random() - 0.5) * 6;
+      const r = (Math.random() - 0.5) * 20;
+      span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+    });
+  });
+
+  // Reset when mouse leaves
+  button.addEventListener("mouseout", () => {
+    [...button.children].forEach((span) => {
+      span.style.transform = "none";
+    });
+  });
+</script>
 
 
 <footer class="footer">

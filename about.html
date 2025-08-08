@@ -61,33 +61,41 @@
         <p>djm3819@gmail.com <br /></p>
         <br />
 
-<a href="http://eepurl.com/ji5LRA" target="_blank">
-  <button
-    id="weirdButton"
-    style="
-      background-color: black;
-      color: orange;
-      padding: 4px 9px;
-      border: none;
-      border-radius: 0px;
-      font-size: 14px;
-      font-style: italic;
-      font-weight: bold;
-      cursor: pointer;
-      font-family: 'IBM Plex Mono', monospace;
-      display: inline-flex;
-      gap: 2px;
-    "
-  >
-  </button>
-</a>
+<p class="description">
+  No spam. Just art and ideas 👽
+</p>
+<br />
+
+<button
+  id="weirdButton"
+  onclick="window.open('http://eepurl.com/ji5LRA', '_blank')"
+  style="
+    background-color: black;
+    color: orange;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'IBM Plex Mono', monospace;
+    display: inline-flex;
+    gap: 2px;
+  "
+>
+  Subscribe
+</button>
 
 <script>
   const button = document.getElementById("weirdButton");
   const text = "Subscribe";
 
+  // Clear existing content (optional)
+  button.textContent = "";
+
   // Create a span for each letter
-  text.split("").forEach((char, i) => {
+  text.split("").forEach((char) => {
     const span = document.createElement("span");
     span.textContent = char;
     span.style.display = "inline-block";
@@ -98,9 +106,9 @@
   // Glitch effect on hover
   button.addEventListener("mouseover", () => {
     [...button.children].forEach((span) => {
-      const x = (Math.random() - 0.5) * 6; // -3 to 3px
+      const x = (Math.random() - 0.5) * 6;
       const y = (Math.random() - 0.5) * 6;
-      const r = (Math.random() - 0.5) * 20; // rotation
+      const r = (Math.random() - 0.5) * 20;
       span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
     });
   });
@@ -112,6 +120,7 @@
     });
   });
 </script>
+<br /><br /><br />
 
       </article>
     </section>
