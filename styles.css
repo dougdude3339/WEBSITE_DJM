@@ -87,7 +87,7 @@ ul {
     list-style-type: disc; /* Bullets for the list */
     font-style: italic;
     padding-left: 40px; /* Increase padding for more indentation */
-    margin-top: 20px; /* Add margin above the list */
+    margin-top: 15px; /* Add margin above the list */
 }
   
 ul li {
