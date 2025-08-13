@@ -44,7 +44,10 @@
          <span class="highlight"
             >for special folks to stumble upon.</span> ← ← ← /That's you!
             <br /><br />
-            If you like my wacky builds - consider <button
+            If you like my <a href="portfolio.html" target="_blank" >wacky builds</a> - consider 
+            
+            
+   <button
   id="weirdButton"
   onclick="window.open('http://eepurl.com/ji5LRA', '_blank')"
   style="
@@ -69,7 +72,7 @@
   const button = document.getElementById("weirdButton");
   const text = "subscribing";
 
-  // Clear existing content (optional)
+  // Clear existing content
   button.textContent = "";
 
   // Create a span for each letter
@@ -77,41 +80,62 @@
     const span = document.createElement("span");
     span.textContent = char;
     span.style.display = "inline-block";
-    span.style.transition = "transform 0.2s ease";
+    span.style.transition = "transform .7s ease";
     button.appendChild(span);
   });
 
-  // Glitch effect on hover
-  button.addEventListener("mouseover", () => {
-    [...button.children].forEach((span) => {
-      const x = (Math.random() - 0.5) * 6;
-      const y = (Math.random() - 0.5) * 6;
-      const r = (Math.random() - 0.5) * 20;
-      span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
-    });
-  });
+  let isHovering = false;
 
-  // Reset when mouse leaves
-  button.addEventListener("mouseout", () => {
+  // Function to randomly transform letters
+  function animateLetters() {
     [...button.children].forEach((span) => {
-      span.style.transform = "none";
+      if (isHovering) {
+        // Hover "warp" effect
+        const x = (Math.random() - 0.5) * 12;
+        const y = (Math.random() - 0.5) * 12;
+        const r = (Math.random() - 0.5) * 40;
+        const scale = 1 + (Math.random() - 0.5) * 0.5;
+        const skewX = (Math.random() - 0.5) * 40;
+        const skewY = (Math.random() - 0.5) * 40;
+        span.style.transform = `
+          translate(${x}px, ${y}px)
+          rotate(${r}deg)
+          scale(${scale})
+          skew(${skewX}deg, ${skewY}deg)
+        `;
+      } else {
+        // Idle wiggle
+        const x = (Math.random() - 0.5) * 6;
+        const y = (Math.random() - 0.5) * 6;
+        const r = (Math.random() - 0.5) * 20;
+        span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+      }
     });
-  });
+  }
+
+  // Continuous animation
+  setInterval(animateLetters, 400);
+
+  // Event listeners for hover
+  button.addEventListener("mouseenter", () => (isHovering = true));
+  button.addEventListener("mouseleave", () => (isHovering = false));
 </script>
+
+
 
 to my 
               <a href="https://gmail.us14.list-manage.com/subscribe?u=1006e923f45e7f3f0cb554af7&id=8c250f2d23" target="_blank" >newsletter</a> 
- - no spam, just updates about new projects and ideas. 
-
+ - I don't send spam, just updates about projects, ideas, and whateve else comes up in life.
+<br /><br />
 <span class="highlight">Hey, I want to see your work too</span> - 
-<a href="mailto:djm3819@gmail.com">send me a message here</a>
+<a href="mailto:djm3819@gmail.com">shoot me an email</a> and say hi.
 
 
 
              <br /> <br />
 
 <br /><br /><br />
-Thanks for spending time here.<br />
+Thanks for stopping by → → → ↓<br />
 ------------------------------<br />
 ------------------------------<br />
 ------------------------------<br />
@@ -123,21 +147,20 @@ Thanks for spending time here.<br />
 ------------------------------<br /><br />
 
 
-↓↓↓↓ My triumphs ↓↓↓↓
+↓↓↓↓ Some accomplishments ↓↓↓↓
 <br /><br />
-            Some of my work has appeared in <span class="highlight">
+            My work has appeared in <span class="highlight">
               <a href="https://hackaday.com/2025/08/07/a-pc-that-uses-hot-coffee-as-coolant/" target="_blank" >Hackaday/ </a> 
               <a href="https://donotresearch.substack.com/p/doug-macdowell-lean-mean-computing" target="_blank" >Do Not Research/ </a>and 
             <a href="https://archive.org/details/ephemer-mal-4-single-page/ephemerMAL%204_printable/" target="_blank" >The Media Archeology Lab///</a>
-          </span> and I've featured work in lots of exhibitions nationwide including solo exhibitions.
+          </span> and I've featured work in exhibitions nationwide including group and solo exhibitions.
           <br /><br />
           
-          <span class="highlight"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=doug+macdowell" target="_blank" >7 research articles published
-            in PubMed</a>.</span> ← ← ← This is from my career working as a Data Analyst in Pediatric Emergency Medicine.
+          I've published <span class="highlight"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=doug+macdowell" target="_blank" >7 peer-reviewed research articles</a>.</span> ← ← ← This is from my career working as a Data Analyst in Pediatric Emergency Medicine.
 
             <br /> <br />
 
-            Meeting <span class="highlight"> <a href="https://www.mixcloud.com/dougdude3339/" target="_blank" > the love of my life.</a>
+            I host a radio show with <span class="highlight"> <a href="https://www.mixcloud.com/dougdude3339/" target="_blank" > my love.</a>
 
             </p>
             <br /> <br />
