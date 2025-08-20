@@ -117,19 +117,14 @@ class="site-title">
     </section>
 
 <br />
-
-<p class="description">
-  No spam. Just art and ideas 👽
-</p>
-<br />
-
+<p>Consider 
 <button
   id="weirdButton"
   onclick="window.open('http://eepurl.com/ji5LRA', '_blank')"
   style="
     background-color: black;
     color: orange;
-    padding: 10px 20px;
+    padding: 4px 10px;
     border: none;
     border-radius: 6px;
     font-size: 18px;
@@ -141,14 +136,14 @@ class="site-title">
     gap: 2px;
   "
 >
-  Subscribe
+  subscribing
 </button>
 
 <script>
   const button = document.getElementById("weirdButton");
-  const text = "Subscribe";
+  const text = "subscribing";
 
-  // Clear existing content (optional)
+  // Clear existing content
   button.textContent = "";
 
   // Create a span for each letter
@@ -156,27 +151,51 @@ class="site-title">
     const span = document.createElement("span");
     span.textContent = char;
     span.style.display = "inline-block";
-    span.style.transition = "transform 0.2s ease";
+    span.style.transition = "transform .7s ease";
     button.appendChild(span);
   });
 
-  // Glitch effect on hover
-  button.addEventListener("mouseover", () => {
-    [...button.children].forEach((span) => {
-      const x = (Math.random() - 0.5) * 6;
-      const y = (Math.random() - 0.5) * 6;
-      const r = (Math.random() - 0.5) * 20;
-      span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
-    });
-  });
+  let isHovering = false;
 
-  // Reset when mouse leaves
-  button.addEventListener("mouseout", () => {
+  // Function to randomly transform letters
+  function animateLetters() {
     [...button.children].forEach((span) => {
-      span.style.transform = "none";
+      if (isHovering) {
+        // Hover "warp" effect
+        const x = (Math.random() - 0.5) * 12;
+        const y = (Math.random() - 0.5) * 12;
+        const r = (Math.random() - 0.5) * 40;
+        const scale = 1 + (Math.random() - 0.5) * 0.5;
+        const skewX = (Math.random() - 0.5) * 40;
+        const skewY = (Math.random() - 0.5) * 40;
+        span.style.transform = `
+          translate(${x}px, ${y}px)
+          rotate(${r}deg)
+          scale(${scale})
+          skew(${skewX}deg, ${skewY}deg)
+        `;
+      } else {
+        // Idle wiggle
+        const x = (Math.random() - 0.5) * 6;
+        const y = (Math.random() - 0.5) * 6;
+        const r = (Math.random() - 0.5) * 20;
+        span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+      }
     });
-  });
+  }
+
+  // Continuous animation
+  setInterval(animateLetters, 400);
+
+  // Event listeners for hover
+  button.addEventListener("mouseenter", () => (isHovering = true));
+  button.addEventListener("mouseleave", () => (isHovering = false));
 </script>
+
+to my 
+              <a href="https://gmail.us14.list-manage.com/subscribe?u=1006e923f45e7f3f0cb554af7&id=8c250f2d23" target="_blank" >newsletter</a> 
+ - I don't send spam, just updates about projects, ideas, and whateve else comes up in life 👽
+<br /><br /></p>
 
 
 <footer class="footer">
