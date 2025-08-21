@@ -75,13 +75,7 @@ class="site-title">
       </article>
     </section>
 
-<br />
-
-<p class="description">
-  No spam. Just art and ideas 👽
-</p>
-<br />
-
+<p>
 <button
   id="weirdButton"
   onclick="window.open('http://eepurl.com/ji5LRA', '_blank')"
@@ -100,14 +94,14 @@ class="site-title">
     gap: 2px;
   "
 >
-  Subscribe
+  Subsribe
 </button>
 
 <script>
   const button = document.getElementById("weirdButton");
-  const text = "Subscribe";
+  const text = "Subsribe";
 
-  // Clear existing content (optional)
+  // Clear existing content
   button.textContent = "";
 
   // Create a span for each letter
@@ -115,27 +109,47 @@ class="site-title">
     const span = document.createElement("span");
     span.textContent = char;
     span.style.display = "inline-block";
-    span.style.transition = "transform 0.2s ease";
+    span.style.transition = "transform .7s ease";
     button.appendChild(span);
   });
 
-  // Glitch effect on hover
-  button.addEventListener("mouseover", () => {
-    [...button.children].forEach((span) => {
-      const x = (Math.random() - 0.5) * 6;
-      const y = (Math.random() - 0.5) * 6;
-      const r = (Math.random() - 0.5) * 20;
-      span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
-    });
-  });
+  let isHovering = false;
 
-  // Reset when mouse leaves
-  button.addEventListener("mouseout", () => {
+  // Function to randomly transform letters
+  function animateLetters() {
     [...button.children].forEach((span) => {
-      span.style.transform = "none";
+      if (isHovering) {
+        // Hover "warp" effect
+        const x = (Math.random() - 0.5) * 12;
+        const y = (Math.random() - 0.5) * 12;
+        const r = (Math.random() - 0.5) * 40;
+        const scale = 1 + (Math.random() - 0.5) * 0.5;
+        const skewX = (Math.random() - 0.5) * 40;
+        const skewY = (Math.random() - 0.5) * 40;
+        span.style.transform = `
+          translate(${x}px, ${y}px)
+          rotate(${r}deg)
+          scale(${scale})
+          skew(${skewX}deg, ${skewY}deg)
+        `;
+      } else {
+        // Idle wiggle
+        const x = (Math.random() - 0.5) * 6;
+        const y = (Math.random() - 0.5) * 6;
+        const r = (Math.random() - 0.5) * 20;
+        span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+      }
     });
-  });
+  }
+
+  // Continuous animation
+  setInterval(animateLetters, 400);
+
+  // Event listeners for hover
+  button.addEventListener("mouseenter", () => (isHovering = true));
+  button.addEventListener("mouseleave", () => (isHovering = false));
 </script>
+<br /></p>
 
 
 <footer class="footer">
