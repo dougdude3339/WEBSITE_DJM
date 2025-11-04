@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Doug MacDowell presents 'Model No. GGR615-PC Owner's Manual', an absurdist artwork made from TESLIN® substrate, accounting paper, and Xerox duplication. This zine-style piece accompanies the Lean Mean Computing Machine (George Foreman Computer) and has been featured in exhibitions from Las Vegas to Boulder."
+      content="Doug MacDowell presents 'Model No. GGR615-PC Owner's Manual', an absurd George Foreman Grill artwork made from TESLIN® substrate, accounting paper, and Xerox duplication. This zine-style piece accompanies the Lean Mean Computing Machine (George Foreman Computer) and has been featured in exhibitions from Las Vegas to Boulder."
     />
     <meta name="robots" content="index, follow" />
     <link
@@ -28,11 +28,11 @@
     />
     <meta
       property="og:title"
-      content="George Foreman Computer User Manual - Doug MacDowell"
+      content="George Foreman Computer User Manual - George Foreman Grill Art - Doug MacDowell"
     />
     <meta
       property="og:description"
-      content="Explore Doug MacDowell's 'Model No. GGR615-PC Owner's Manual' — a Xeroxed zine artwork for the George Foreman Computer, featured in exhibitions from Las Vegas to Boulder."
+      content="Explore Doug MacDowell's 'Model No. GGR615-PC Owner's Manual' — a Xeroxed zine artwork for the George Foreman Computer, featured in exhibitions from Las Vegas to Boulder. George Foreman Grill Art."
     />
     <meta
       property="og:image"
@@ -92,20 +92,17 @@
         </h2>
 
 <p>
-  <strong class="visually-hidden label-tag">Description:</strong> I wanted to imagine
-  what it'd be like if a George Foreman grill merged with a personal
-  computer. How would it communicate with the user? What
-  information could it use to describe itself? What are it's behaviors
-  and what's it supposed to accomplish? Included in this Zine (or User
-  Manual) crafted with TESLIN® substrate, you'll find information about the operation, end user behavior
-  preferences, cooking charts, and even recipes for a George Foreman Computer.
+  <strong class="visually-hidden label-tag">Description:</strong> What if a George Foreman Grill merged 
+  with a personal computer? Included in this Zine (or User
+  Manual) lies information about the operation, end user behavior
+  preferences, cooking charts, and even recipes for a George Foreman Computer. Printed using TESLIN® substrate, it is 
+  resistant to whatever grease or technological byproduct falls on it. <br /><br />
   This zine was featured in 
   <a href="https://archive.org/details/ephemer-mal-4-single-page/ephemerMAL%204_printable/" target="_blank">
     Boulder's Media Archeology Lab's Ephemeral Zine</a> 
   curated by the podcasters and artists 
   <a href="https://www.ourfriendthe.computer/" target="_blank">
-    Our Friend the Computer</a> 
-  (I highly recommened their podcast). View the user manual in it's
+    Our Friend the Computer</a>. You can view the user manual in it's
   entireity on 
   <a href="https://archive.org/details/ephemer-mal-4-single-page/ephemerMAL%204_printable/" target="_blank">
     archive.org</a>. For related work, check out
@@ -194,60 +191,6 @@
 >
   Subsribe
 </button>
-
-<script>
-  const button = document.getElementById("weirdButton");
-  const text = "Subsribe";
-
-  // Clear existing content
-  button.textContent = "";
-
-  // Create a span for each letter
-  text.split("").forEach((char) => {
-    const span = document.createElement("span");
-    span.textContent = char;
-    span.style.display = "inline-block";
-    span.style.transition = "transform .7s ease";
-    button.appendChild(span);
-  });
-
-  let isHovering = false;
-
-  // Function to randomly transform letters
-  function animateLetters() {
-    [...button.children].forEach((span) => {
-      if (isHovering) {
-        // Hover "warp" effect
-        const x = (Math.random() - 0.5) * 12;
-        const y = (Math.random() - 0.5) * 12;
-        const r = (Math.random() - 0.5) * 40;
-        const scale = 1 + (Math.random() - 0.5) * 0.5;
-        const skewX = (Math.random() - 0.5) * 40;
-        const skewY = (Math.random() - 0.5) * 40;
-        span.style.transform = `
-          translate(${x}px, ${y}px)
-          rotate(${r}deg)
-          scale(${scale})
-          skew(${skewX}deg, ${skewY}deg)
-        `;
-      } else {
-        // Idle wiggle
-        const x = (Math.random() - 0.5) * 6;
-        const y = (Math.random() - 0.5) * 6;
-        const r = (Math.random() - 0.5) * 20;
-        span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
-      }
-    });
-  }
-
-  // Continuous animation
-  setInterval(animateLetters, 400);
-
-  // Event listeners for hover
-  button.addEventListener("mouseenter", () => (isHovering = true));
-  button.addEventListener("mouseleave", () => (isHovering = false));
-</script>
-<br /></p>
  
 
 <footer class="footer">
