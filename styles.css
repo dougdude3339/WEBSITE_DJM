@@ -273,6 +273,16 @@ section img {
   color: #777;
 }
 
+.code-container {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #111;
+  color: #eee;
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
 
 
 
