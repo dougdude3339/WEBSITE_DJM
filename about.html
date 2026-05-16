@@ -1,206 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-7XTFFVDB9K');
-    </script>
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="About artist and data analyst Doug MacDowell." />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://dougmacdowell.com/about.html" />
-    <meta property="og:title" content="About - Artist Doug MacDowell" />
-    <meta property="og:description" content="About artist Doug MacDowell" />
-    <meta property="og:image" content="https://dougmacdowell.com/images/doug-macdowell-artist.jpeg" />
-    <meta property="og:url" content="https://dougmacdowell.com/about.html" />
-    <meta property="og:type" content="article" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <title>About - Artist Doug MacDowell</title>
-    <link rel="stylesheet" href="styles.css" />
-        <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;1,200&display=swap"
-      rel="stylesheet"
-    />
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Doug MacDowell",
-  "url": "https://dougmacdowell.com/about.html",
-  "image": "https://dougmacdowell.com/images/doug-macdowell-artist.jpeg",
-  "jobTitle": "Artist and Data Analyst",
-  "sameAs": [
-    "https://www.mixcloud.com/dougdude3339/",
-    "https://pubmed.ncbi.nlm.nih.gov/?term=doug+macdowell"
-  ]
-}
-</script>
-
-  </head>
-
-  <body>
-
-<img
-  src="images/portrait-doug-macdowell.jpeg"
-  alt="Doug MacDowell, artist and data analyst, portrait photograph"
-  loading="eager"
-  decoding="async"
-  width="1440"
-  height="960"
-  class="responsive-image"
-/>
-
-    <nav>
-      <a href="index.html">&larr; Home</a>
-      <!-- Link to Home page with left arrow -->
-    </nav>
-
-    <section>
-      <!-- First artwork/project -->
-      <article>
-
-        <p>Hi, I'm Doug - <span class="highlight">a data analyst, maker, and collector of George Foreman Grills.</span>
-        <br /> <br />
-        This <a href="index.html" target="_blank" >website is my archive/ blog/ directory/</a>  - an ongoing, messy HTML script  
-         <span class="highlight"
-            >for special folks to stumble upon.</span> ← ← ← /That's you!
-            <br /><br />
-            If you like my <a href="portfolio.html" target="_blank" >work</a> - consider 
-            
-            
-   <button
-  id="weirdButton"
-  onclick="window.open('http://eepurl.com/ji5LRA', '_blank')"
-  style="
-    background-color: black;
-    color: orange;
-    padding: 4px 10px;
-    border: none;
-    border-radius: 6px;
-    font-size: 18px;
-    font-style: italic;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: 'IBM Plex Mono', monospace;
-    display: inline-flex;
-    gap: 2px;
-  "
->
-  subscribing
-</button>
-
-<script>
-  const button = document.getElementById("weirdButton");
-  const text = "subscribing";
-
-  // Clear existing content
-  button.textContent = "";
-
-  // Create a span for each letter
-  text.split("").forEach((char) => {
-    const span = document.createElement("span");
-    span.textContent = char;
-    span.style.display = "inline-block";
-    span.style.transition = "transform .7s ease";
-    button.appendChild(span);
-  });
-
-  let isHovering = false;
-
-  // Function to randomly transform letters
-  function animateLetters() {
-    [...button.children].forEach((span) => {
-      if (isHovering) {
-        // Hover "warp" effect
-        const x = (Math.random() - 0.5) * 12;
-        const y = (Math.random() - 0.5) * 12;
-        const r = (Math.random() - 0.5) * 40;
-        const scale = 1 + (Math.random() - 0.5) * 0.5;
-        const skewX = (Math.random() - 0.5) * 40;
-        const skewY = (Math.random() - 0.5) * 40;
-        span.style.transform = `
-          translate(${x}px, ${y}px)
-          rotate(${r}deg)
-          scale(${scale})
-          skew(${skewX}deg, ${skewY}deg)
-        `;
-      } else {
-        // Idle wiggle
-        const x = (Math.random() - 0.5) * 6;
-        const y = (Math.random() - 0.5) * 6;
-        const r = (Math.random() - 0.5) * 20;
-        span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
-      }
-    });
-  }
-
-  // Continuous animation
-  setInterval(animateLetters, 400);
-
-  // Event listeners for hover
-  button.addEventListener("mouseenter", () => (isHovering = true));
-  button.addEventListener("mouseleave", () => (isHovering = false));
-</script>
-
-
-
-to my 
-              <a href="https://gmail.us14.list-manage.com/subscribe?u=1006e923f45e7f3f0cb554af7&id=8c250f2d23" target="_blank" >newsletter</a> 
- for updates about projects, ideas, and whateve else comes up in life.
-<br /><br />
-<span class="highlight">You can email me here if you like → →</span>
-<a href="mailto:djm3819@gmail.com">contact</a>
-
-
-
-
-<br /><br /><br /><br /><br />
-Thanks for stopping by → → → ↓<br />
-------------------------------<br />
-------------------------------<br />
-------------------------------<br />
-------------------------------<br />
-------------------------------<br />
-------------------------------<br />
-------------------------------<br />
-------------------------------<br />
-------------------------------<br /><br />
-
-
-↓↓↓↓ Some accomplishments ↓↓↓↓
-<br /><br />
-            My work has appeared in <span class="highlight">
-              <a href="https://hackaday.com/2025/08/07/a-pc-that-uses-hot-coffee-as-coolant/" target="_blank" >Hackaday/ </a> 
-              <a href="https://donotresearch.substack.com/p/doug-macdowell-lean-mean-computing" target="_blank" >Do Not Research/ </a>and 
-            <a href="https://archive.org/details/ephemer-mal-4-single-page/ephemerMAL%204_printable/" target="_blank" >The Media Archeology Lab///</a>
-          </span> and I've featured work in exhibitions nationwide including group and solo exhibitions.
-          <br /><br />
-          
-          I've published <span class="highlight"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=doug+macdowell" target="_blank" >8 peer-reviewed research articles</a>.</span> ← ← ← This is from my career working as a Data Analyst in Pediatric Emergency Medicine.
-
-            <br /> <br />
-
-            I host a <span class="highlight"><a href="https://www.mixcloud.com/dougdude3339/" target="_blank" > radio show with my wife</span></a>.
-              It's three hours of music curated by our past and present tastes - alternative, electronic, industrial, experimental, 
-              and a minimum of one NIN track per set.
-
-              <br /> <br />
-
-              <span class="highlight"><a href="cv.html" target="_blank" > Full CV</span></a>
-
-
+   <head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTFFVDB9K"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag() { dataLayer.push(arguments); }
+         gtag('js', new Date());
+         gtag('config', 'G-7XTFFVDB9K');
+      </script>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="About artist and data analyst Doug MacDowell." />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://dougmacdowell.com/about.html" />
+      <meta property="og:title" content="About - Artist Doug MacDowell" />
+      <meta property="og:description" content="About artist Doug MacDowell" />
+      <meta property="og:image" content="https://dougmacdowell.com/images/doug-macdowell-artist.jpeg" />
+      <meta property="og:url" content="https://dougmacdowell.com/about.html" />
+      <meta property="og:type" content="article" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <title>About - Artist Doug MacDowell</title>
+      <link rel="stylesheet" href="styles.css" />
+      <link
+         href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,200;1,200&display=swap"
+         rel="stylesheet"
+         />
+      <script type="application/ld+json">
+         {
+           "@context": "https://schema.org",
+           "@type": "Person",
+           "name": "Doug MacDowell",
+           "url": "https://dougmacdowell.com/about.html",
+           "image": "https://dougmacdowell.com/images/doug-macdowell-artist.jpeg",
+           "jobTitle": "Artist and Data Analyst",
+           "sameAs": [
+             "https://www.mixcloud.com/dougdude3339/",
+             "https://pubmed.ncbi.nlm.nih.gov/?term=doug+macdowell"
+           ]
+         }
+      </script>
+   </head>
+   <body>
+      <img
+         src="images/portrait-doug-macdowell.jpeg"
+         alt="Doug MacDowell, artist and data analyst, portrait photograph"
+         loading="eager"
+         decoding="async"
+         width="1440"
+         height="960"
+         class="responsive-image"
+         />
+      <nav>
+         <a href="index.html">&larr; Home</a>
+         <!-- Link to Home page with left arrow -->
+      </nav>
+      <section>
+         <!-- First artwork/project -->
+         <article>
+            <p>
+               Hi, I'm Doug - <span class="highlight">a data analyst, maker, and collector of George Foreman Grills.</span>
+               <br /> <br />
+               This <a href="index.html" target="_blank" >website is my archive/ blog/ directory/</a>  - an ongoing, messy HTML script  
+               <span class="highlight"
+                  >for special folks to stumble upon.</span> ← ← ← /That's you!
+               <br /><br />
+               If you like my <a href="portfolio.html" target="_blank" >work</a> - consider 
+               <button
+                  id="weirdButton"
+                  onclick="window.open('http://eepurl.com/ji5LRA', '_blank')"
+                  style="
+                  background-color: black;
+                  color: orange;
+                  padding: 4px 10px;
+                  border: none;
+                  border-radius: 6px;
+                  font-size: 18px;
+                  font-style: italic;
+                  font-weight: bold;
+                  cursor: pointer;
+                  font-family: 'IBM Plex Mono', monospace;
+                  display: inline-flex;
+                  gap: 2px;
+                  "
+                  >
+               subscribing
+               </button>
+               <script>
+                  const button = document.getElementById("weirdButton");
+                  const text = "subscribing";
+                  
+                  // Clear existing content
+                  button.textContent = "";
+                  
+                  // Create a span for each letter
+                  text.split("").forEach((char) => {
+                    const span = document.createElement("span");
+                    span.textContent = char;
+                    span.style.display = "inline-block";
+                    span.style.transition = "transform .7s ease";
+                    button.appendChild(span);
+                  });
+                  
+                  let isHovering = false;
+                  
+                  // Function to randomly transform letters
+                  function animateLetters() {
+                    [...button.children].forEach((span) => {
+                      if (isHovering) {
+                        // Hover "warp" effect
+                        const x = (Math.random() - 0.5) * 12;
+                        const y = (Math.random() - 0.5) * 12;
+                        const r = (Math.random() - 0.5) * 40;
+                        const scale = 1 + (Math.random() - 0.5) * 0.5;
+                        const skewX = (Math.random() - 0.5) * 40;
+                        const skewY = (Math.random() - 0.5) * 40;
+                        span.style.transform = `
+                          translate(${x}px, ${y}px)
+                          rotate(${r}deg)
+                          scale(${scale})
+                          skew(${skewX}deg, ${skewY}deg)
+                        `;
+                      } else {
+                        // Idle wiggle
+                        const x = (Math.random() - 0.5) * 6;
+                        const y = (Math.random() - 0.5) * 6;
+                        const r = (Math.random() - 0.5) * 20;
+                        span.style.transform = `translate(${x}px, ${y}px) rotate(${r}deg)`;
+                      }
+                    });
+                  }
+                  
+                  // Continuous animation
+                  setInterval(animateLetters, 400);
+                  
+                  // Event listeners for hover
+                  button.addEventListener("mouseenter", () => (isHovering = true));
+                  button.addEventListener("mouseleave", () => (isHovering = false));
+               </script>
+               to my 
+               <a href="https://gmail.us14.list-manage.com/subscribe?u=1006e923f45e7f3f0cb554af7&id=8c250f2d23" target="_blank" >newsletter</a> 
+               for updates about projects, ideas, and whateve else comes up in life.
+               <br /><br />
+               <span class="highlight">You can email me here if you like → →</span>
+               <a href="mailto:djm3819@gmail.com">contact</a>
+               <br /><br /><br /><br /><br />
+               Thanks for stopping by → → → ↓<br />
+               ------------------------------<br />
+               ------------------------------<br />
+               ------------------------------<br />
+               ------------------------------<br />
+               ------------------------------<br />
+               ------------------------------<br />
+               ------------------------------<br />
+               ------------------------------<br />
+               ------------------------------<br /><br />
+               ↓↓↓↓ Some accomplishments ↓↓↓↓
+               <br /><br />
+               My work has appeared in <span class="highlight">
+               <a href="https://hackaday.com/2025/08/07/a-pc-that-uses-hot-coffee-as-coolant/" target="_blank" >Hackaday/ </a> 
+               <a href="https://donotresearch.substack.com/p/doug-macdowell-lean-mean-computing" target="_blank" >Do Not Research/ </a>and 
+               <a href="https://archive.org/details/ephemer-mal-4-single-page/ephemerMAL%204_printable/" target="_blank" >The Media Archeology Lab///</a>
+               </span> and I've featured work in exhibitions nationwide including group and solo exhibitions.
+               <br /><br />
+               I've published <span class="highlight"><a href="https://pubmed.ncbi.nlm.nih.gov/?term=doug+macdowell" target="_blank" >8 peer-reviewed research articles</a>.</span> ← ← ← This is from my career working as a Data Analyst in Pediatric Emergency Medicine.
+               <br /> <br />
+               I host a <span class="highlight"><a href="https://www.mixcloud.com/dougdude3339/" target="_blank" > radio show with my wife</span></a>.
+               It's three hours of music curated by our past and present tastes - alternative, electronic, industrial, experimental, 
+               and a minimum of one NIN track per set.
+               <br /> <br />
+               <span class="highlight"><a href="cv.html" target="_blank" > Full CV</span></a>
             </p>
             <br /> <br />
-
-      </article>
-    </section>
-  </body>
+         </article>
+      </section>
+   </body>
 </html>

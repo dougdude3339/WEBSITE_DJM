@@ -11,7 +11,7 @@
 /* Set the default font to Courier New */
 body {
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 200;
+    font-weight: 400;
     background-color: #ffffff; /* Set background to white */
     margin: 0;
     padding: 20px; /* Add some padding around the content */
@@ -20,7 +20,7 @@ body {
 /* Paragraph styling */
 p {
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 16px; /* Font size */
     color: black; /* Text color */
     line-height: 1.7; /* Line spacing for better readability */
@@ -84,20 +84,23 @@ h2 {
 
   
 ul {
-    list-style-type: disc; /* Bullets for the list */
+    list-style-type: disc;
     font-style: italic;
-    padding-left: 40px; /* Increase padding for more indentation */
-    margin-top: 15px; /* Add margin above the list */
+    padding-left: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px; /* matches paragraph rhythm */
 }
-  
+
 ul li {
     font-size: 16px;
-    margin-bottom: 10px; /* Space between list items */
+    line-height: 1.7; /* match paragraph line-height */
+    margin-bottom: 5px; /* subtle spacing between items */
 }
-  
+
 ul li::marker {
-    color: blue; /* Change this to your desired color */
+    color: blue;
 }
+
 
 /* Global link style */
 a {
