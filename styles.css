@@ -21,7 +21,7 @@ body {
 /* Paragraph styling */
 p {
     font-family: 'IBM Plex Mono', monospace;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 16px; /* Font size */
     color: black; /* Text color */
     line-height: 1.7; /* Line spacing for better readability */
