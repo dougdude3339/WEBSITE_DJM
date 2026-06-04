@@ -157,6 +157,11 @@ nav a:hover {
     margin-bottom: 20px; /* Adds space below the image */
 }
 
+/* Limits clickable area for images */
+a:has(img) {
+    display: inline-block;
+}
+
 .responsive-image-2 {
     width: 100%; /* Adjust to your desired width */
     max-width: 1000px; /* Set a maximum width */
